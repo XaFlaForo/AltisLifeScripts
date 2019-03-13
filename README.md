@@ -18,6 +18,9 @@ Copyright (c) 2019 Ethan (XaFlaForo), XaFlaForo Studios.
 ## ALL CODE IS LICENSED UNDER Attribution-NonCommercial-ShareAlike CC BY-NC-SA
 This license lets others remix, tweak, and build upon your work non-commercially, as long as they credit you and license their new creations under the identical terms.
     <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/)"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png" /></a>
+    
+## Products
+<b> Base Installation Pack </b> https://github.com/XaFlaForo/AltisLifeScripts/tree/Base-Installation-Pack
 
 
 
