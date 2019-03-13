@@ -12,6 +12,9 @@
 ## Dependencies
 - AsYetUntitled (You need to get the framework yourself at the repo at the following url: https://www.altisliferpg.com/forum/8-altis-life-rpg-official-framework/)
 
+## Donate
+paypal.me/EthanSolutions
+
 ## Copyright and License
 
 Copyright (c) 2019 Ethan (XaFlaForo), XaFlaForo Studios.
