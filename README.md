@@ -1,4 +1,4 @@
-# XaFlaForo Studios - Altis Life Collection
+# <CENTER>XaFlaForo Studios - Altis Life Collection
 
 <h3 align="center">Altis Life: Scripts (ARMA 3 RPG Framework)</h3>
 
