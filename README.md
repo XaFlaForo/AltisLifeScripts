@@ -6,7 +6,6 @@
     <a href="https://discord.gg/4KS232W)"><img src="https://img.shields.io/badge/Discord-Join-blue.svg?longCache=true&style=for-the-badge" /></a>
     <img src="https://img.shields.io/badge/ARMA%203%20Version-1.82-yellowgreen.svg?longCache=true&style=for-the-badge" />
     <img src="https://img.shields.io/badge/ARMA%203%20Branch-Stable-yellow.svg?longCache=true&style=for-the-badge" />
-    <img src="https://img.shields.io/badge/Framework%20Version-Beta%20v0.1-red.svg?longCache=true&style=for-the-badge" />
 </p>
 
 ## Dependencies
