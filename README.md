@@ -1,13 +1,6 @@
 # <CENTER>XaFlaForo Studios - Base Installation Pack
 
-<h3 align="center">Altis Life: Scripts (ARMA 3 RPG Framework)</h3>
-
-<p align="center">
-    <a href="https://discord.gg/4KS232W)"><img src="https://img.shields.io/badge/Discord-Join-blue.svg?longCache=true&style=for-the-badge" /></a>
-    <img src="https://img.shields.io/badge/ARMA%203%20Version-1.82-yellowgreen.svg?longCache=true&style=for-the-badge" />
-    <img src="https://img.shields.io/badge/ARMA%203%20Branch-Stable-yellow.svg?longCache=true&style=for-the-badge" />
-    <img src="https://img.shields.io/badge/Framework%20Version-Beta%20v0.1-red.svg?longCache=true&style=for-the-badge" />
-</p>
+<h3 align="center">Arma Script (Base Installation Pack)</h3>
 
 ## Dependencies
 - AsYetUntitled (You need to get the framework yourself at the repo at the following url: https://www.altisliferpg.com/forum/8-altis-life-rpg-official-framework/)
