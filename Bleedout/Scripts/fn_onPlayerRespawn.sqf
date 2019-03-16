@@ -48,7 +48,9 @@ if (!XaFlaForo_in_down_state) then
   [_unit] spawn XaFlaForo_fnc_deathscreen;
 
   //--- Medic XaFlaForo_fnc_handleMedicRequest
-  [_unit] remoteExecCall XaFlaForo_fnc_handleMedicRequest;
+  //[] remoteExecCall XaFlaForo_fnc_handleMedicRequest;
+  [] remoteExec ["XaFlaForo_fnc_handleMedicRequest", 0, JIP];
+
 
   //--- Change Variables
   XaFlaForo_in_down_state = true;

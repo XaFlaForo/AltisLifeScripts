@@ -22,15 +22,10 @@
  */
 
 //--- Params
-params [_unit];
+//params [_unit];
 
 //--- Not a medic
 if !(playerSide isEqualTo independent) exitWith {};
-
-//--- Create Marker
-_XaFlaForo_Marker_Bleedout = createMarker ["Dead Player", _unit];
-_XaFlaForo_Marker_Bleedout setMarkerShape "ICON";
-_XaFlaForo_Marker_Bleedout setMarkerType "hd_dot";
 
 //--- Hint
 ["Player Down",["Check your map to find the player"]] call bis_fnc_showNotification;
