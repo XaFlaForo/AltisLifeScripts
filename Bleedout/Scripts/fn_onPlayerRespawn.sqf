@@ -72,7 +72,7 @@ else
 
   //--- Setup Actions
   [] call life_fnc_setupActions;
-  deleteMarker "Dead Player"
+  deleteMarker "Dead Player";
 
   //--- Reset Client Variables
   life_action_inUse = false;
