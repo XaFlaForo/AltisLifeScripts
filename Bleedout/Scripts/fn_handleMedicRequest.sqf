@@ -28,7 +28,7 @@ parms [_unit];
 if !(playerSide isEqualTo independent) exitWith {};
 
 //--- Create Marker
-_XaFlaForo_Marker_Bleedout = createMarker ["Dead Player", _unit]
+_XaFlaForo_Marker_Bleedout = createMarker ["Dead Player", _unit];
 _XaFlaForo_Marker_Bleedout setMarkerShape "ICON";
 _XaFlaForo_Marker_Bleedout setMarkerType "hd_dot";
 
