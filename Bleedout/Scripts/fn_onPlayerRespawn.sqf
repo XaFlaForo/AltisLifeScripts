@@ -41,6 +41,7 @@ if (!XaFlaForo_in_down_state) then
 
   //--- Anim State Change
   [_unit, "acts_InjuredLyingRifle01"] remoteExecCall ["life_fnc_animSync", 0];
+  deleteVehicle life_corpse;
 
   disableSerialization;
 
@@ -49,7 +50,7 @@ if (!XaFlaForo_in_down_state) then
 
   //--- Medic XaFlaForo_fnc_handleMedicRequest
   //[] remoteExecCall XaFlaForo_fnc_handleMedicRequest;
-  [] remoteExec ["XaFlaForo_fnc_handleMedicRequest", 0, JIP];
+  [life_corpse,profileName] remoteExecCall ["life_fnc_medicRequest",independent];
 
 
   //--- Change Variables
