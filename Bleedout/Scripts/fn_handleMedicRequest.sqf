@@ -22,7 +22,7 @@
  */
 
 //--- Params
-//params [_unit];
+//params ["_unit"];
 
 //--- Not a medic
 if !(playerSide isEqualTo independent) exitWith {};
