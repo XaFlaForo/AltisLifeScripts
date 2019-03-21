@@ -36,8 +36,22 @@
  _damage = damage _injured;
  _currentblood = XaFlaForo_Blood;
 
+/*
+while { animationstate _healer isEqualTo  "AinvPknlMstpSlayWrflDnon_medic" && _healer side player isEqualTo independent } do
+{
+    XaFlaForo_Blood = XaFlaForo_Blood - 0.01;
+    BLEEDOUTCtrl(99532) ctrlSetTextColor [0,0.2,0,1];
+    BLEEDOUTCtrl(99533) ctrlSetText "You are being revived";
+
+    if (XaFlaForo_Blood <= 0.01) then
+    {
+        [] spawn XaFlaForo_fnc_onRevive;
+    };
+
+};
+*/
  //--- Check If Player Is Bleeding Out
 if ( XaFlaForo_in_down_state ) then {
- 		XaFlaForo_Blood = XaFlaForo_Blood - 0.15;
+ 		XaFlaForo_Blood = XaFlaForo_Blood - 0.07;
  	  systemChat "You were healed by another civilian";
  };

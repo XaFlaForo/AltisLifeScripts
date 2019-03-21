@@ -39,22 +39,34 @@ if (!XaFlaForo_in_down_state) then
   _unit setPosATL (getPosATL _corpse);
   _unit setDir (getDir _corpse);
 
+  if  !((vehicle _unit) isEqualTo _unit) then {
+      UnAssignVehicle _unit;
+      _unit action ["getOut", vehicle _unit];
+      _unit setPosATL [(getPosATL _unit select 0) + 3, (getPosATL _unit select 1) + 1, 0];
+  };
+
+  _unit setUnitLoadout XaFlaForo_bleeding_loadout;
+  removeAllWeapons _unit;
+
+
   //--- Anim State Change
   [_unit, "acts_InjuredLyingRifle01"] remoteExecCall ["life_fnc_animSync", 0];
   deleteVehicle life_corpse;
 
   disableSerialization;
 
+
   //--- Init Death screenshot
   [_unit] spawn XaFlaForo_fnc_deathscreen;
 
-  //--- Medic XaFlaForo_fnc_handleMedicRequest
-  //[] remoteExecCall XaFlaForo_fnc_handleMedicRequest;
-  [life_corpse,profileName] remoteExecCall ["life_fnc_medicRequest",independent];
-
+  //--- Revive effects
+  [] spawn XaFlaForo_fnc_bleedoutEffects;
 
   //--- Change Variables
   XaFlaForo_in_down_state = true;
+
+  //--- Medic XaFlaForo_fnc_handleMedicRequest
+  [] remoteExec XaFlaForo_fnc_handleMedicRequest;
 
 }
 //--- Player has been killed (already was in bleeding out stage)
@@ -72,10 +84,13 @@ else
   //--- Change & Fix Anim Points
   [_unit, ""] remoteExecCall ["life_fnc_animSync", 0];
   player playMoveNow "AmovPpneMstpSrasWrflDnon";
+  XaFlaForo_Can_Suicide = true;
 
   //--- Setup Actions
   [] call life_fnc_setupActions;
   deleteMarker "Dead Player";
+  deleteVehicle life_corpse;
+  6969 cutText["Thanks For Using Death Screen By XaFlaForo - To remove this notice please donate £0.99 to XaFlaForo","PLAIN"];
 
   //--- Reset Client Variables
   life_action_inUse = false;
@@ -85,14 +100,18 @@ else
   life_carryWeight = 0;
   life_cash = 0;
   life_is_alive = false;
-  6969 cutText["Life_Death_Screen","PLAIN"];
-  //6969 cutText ["", "PLAIN"]
 
   //--- Call Database
   [0] call SOCK_fnc_updatePartial;
   [3] call SOCK_fnc_updatePartial;
   [4] call SOCK_fnc_updatePartial;
 
+  //--- Revive effects
+  [] spawn XaFlaForo_fnc_bleedoutEffects;
+
   //--- Load Spawn Menu
   [] call life_fnc_spawnmenu;
+
+  (findDisplay 73001) displaySetEventHandler ["KeyDown","if ((_this select 1) isEqualTo 1) then {false}"];
+
 };

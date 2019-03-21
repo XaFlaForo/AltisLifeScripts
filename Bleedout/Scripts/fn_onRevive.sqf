@@ -20,12 +20,11 @@
  * paypal.me/EthanSolutions
  */
 
-
-
 //--- Get Plaer Back To Normal
 [player, ""] remoteExecCall ["life_fnc_animSync", 0];
 [] call life_fnc_setupActions;
 _unit setUnitLoadout XaFlaForo_bleeding_loadout;
-6969 cutText["Life_Death_Screen","PLAIN"];
+6969 cutText["","PLAIN"]; 
 life_action_inUse = false;
 XaFlaForo_in_down_state = false;
+XaFlaForo_Can_Suicide = true;

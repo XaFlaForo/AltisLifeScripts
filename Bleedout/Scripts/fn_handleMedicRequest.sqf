@@ -22,10 +22,10 @@
  */
 
 //--- Params
-//params ["_unit"];
+params ["_unit"];
 
 //--- Not a medic
 if !(playerSide isEqualTo independent) exitWith {};
 
 //--- Hint
-["Player Down",["Check your map to find the player"]] call bis_fnc_showNotification;
+["TaskAssigned",["","Revive Player On Map"]] call BIS_fnc_showNotification;

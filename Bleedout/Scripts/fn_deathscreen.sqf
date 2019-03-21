@@ -35,6 +35,7 @@ params ["_unit", "_display"];
 XaFlaForo_Blood = 0.00;
 XaFlaForo_Can_Suicide = false;
 XaFlaForo_forceBleedOut = false;
+XaFlaForo_Medic_Distance = if (([independent,getPosATL player,120] call life_fnc_nearUnits)) then {"Yes"} else {"No"};
 
 //--- Remove The Hud
 [] call life_fnc_hudUpdate;
@@ -42,17 +43,15 @@ XaFlaForo_forceBleedOut = false;
 //--- Fetch Display
 6969 cutRsc["Life_Death_Screen","PLAIN"];
 BLEEDOUTCtrl(99533) ctrlSetText "RESPAWN NOT AVAILIABLE";
+(uiNamespace getVariable ["Life_Death_Screen",displayNull]) displaySetEventHandler ["KeyDown","if ((_this select 1) isEqualTo 1) then {true}"]; //Block the ESC menu
 
-//--- Request Medic
-systemChat "Attempting To Request A Medic";
-//--- Work On
-systemChat "Medic Request Successs";
 
  //--- LOOP DEATHSCREEN
 while {XaFlaForo_in_down_state} do {
 
       //--- Control Progress Bar
       BLEEDOUTCtrl(99532) progressSetPosition (1 - (damage player));
+
 
      //--- Set damage
      _unit setDammage XaFlaForo_Blood;

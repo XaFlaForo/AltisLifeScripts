@@ -57,16 +57,13 @@ if (!XaFlaForo_in_down_state) then
 
   //--- Remove items for good measure
   [_unit] call life_fnc_dropItems;
+
+  _unit setVariable ["incapacitated", false, true];
+
 }
 //--- Player has been killed (not yet entered bleeding out stage)
 else
 {
-
-if  !((vehicle _unit) isEqualTo _unit) then {
-    UnAssignVehicle _unit;
-    _unit action ["getOut", vehicle _unit];
-    _unit setPosATL [(getPosATL _unit select 0) + 3, (getPosATL _unit select 1) + 1, 0];
-  };
 
   //--- Close Any Dialogs
   if (dialog) then {
@@ -74,6 +71,6 @@ if  !((vehicle _unit) isEqualTo _unit) then {
   };
 
   //--- Set incapacitated status
-  _unit setVariable ["incapacitated", false, true];
+  _unit setVariable ["incapacitated", true, true];
 
 };
