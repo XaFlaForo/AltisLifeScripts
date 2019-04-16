@@ -8,7 +8,7 @@
 
 class CAU_UserInputMenus {
 	class Functions {
-		#define FUNC(name) class name {file = Functions\GUI\systems\display##name##.sqf;};
+		#define FUNC(name) class name {file = XaFlaForo\GUI\systems\display##name##.sqf;};
 		FUNC(guiMessage)
 		FUNC(listBox)
 		FUNC(slider)
