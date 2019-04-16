@@ -1,4 +1,5 @@
+#include "GUI\CfgFunctions.cpp"
 class XaFlaForo_Functions {
     tag = "XaFlaForo";
-    #include "Bleedout\functions.hpp"
+    //--- Include Scripts Under Here
 };
